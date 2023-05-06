@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "skinet", "skinet\skinet.csproj", "{AFB62856-78C0-4F93-844D-1790E1B6206C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{1B5C495C-8328-49BE-AD7F-529951398E12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastracture", "Infrastracture\Infrastracture.csproj", "{35434D10-88FA-4E08-9B60-F33EA349FE40}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFB62856-78C0-4F93-844D-1790E1B6206C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFB62856-78C0-4F93-844D-1790E1B6206C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFB62856-78C0-4F93-844D-1790E1B6206C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFB62856-78C0-4F93-844D-1790E1B6206C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B5C495C-8328-49BE-AD7F-529951398E12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B5C495C-8328-49BE-AD7F-529951398E12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B5C495C-8328-49BE-AD7F-529951398E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B5C495C-8328-49BE-AD7F-529951398E12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35434D10-88FA-4E08-9B60-F33EA349FE40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35434D10-88FA-4E08-9B60-F33EA349FE40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35434D10-88FA-4E08-9B60-F33EA349FE40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35434D10-88FA-4E08-9B60-F33EA349FE40}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A2BDE5A-9740-4D42-A416-38B88FCCF00E}
+	EndGlobalSection
+EndGlobal
