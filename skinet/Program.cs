@@ -1,3 +1,4 @@
+using Core.Interfaces;
 using Infrastracture.Data;
 using Microsoft.EntityFrameworkCore;
 using skinet.Extensions;
