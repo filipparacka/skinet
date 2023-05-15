@@ -8,9 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-var app = builder.Build();
 builder.Services.AddApplicationServices(builder.Configuration);
-
+var app = builder.Build();
 app.UseSwagger();
 
 // Configure the HTTP request pipeline.
@@ -28,6 +27,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseStaticFiles();
+
+app.UseCors("CorsPolicy");
+
+app.UseAuthorization();
 
 app.UseRouting();
 

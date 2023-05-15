@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using skinet.DTOs;
 using skinet.Errors;
+using skinet.Helpers;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace skinet.Controllers
 {
@@ -29,13 +31,22 @@ namespace skinet.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IReadOnlyList<ProductToReturnDTO>>> GetProducts()
+        public async Task<ActionResult<Pagination<ProductToReturnDTO>>> GetProducts([FromQuery]ProductSpecParams productParams)
         {
-            var spec = new ProductsWithTypesAndBrandsSpecification();
+            var spec = new ProductsWithTypesAndBrandsSpecification(productParams);
+
+            var countSpec = new ProductWithFiltersForCountSpecification(productParams);
+
+            var totalItems = await productsRepo.CountAsync(countSpec);
 
             var products = await productsRepo.ListAsync(spec);
 
-            return Ok(mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDTO>>(products));
+            var data = mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDTO>>(products);
+
+            return Ok(new Pagination<ProductToReturnDTO>(productParams.PageIndex,
+                productParams.PageSize,
+                totalItems,
+                data));
         }
 
         [HttpGet("{id}")]
