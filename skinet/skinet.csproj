@@ -30,12 +30,22 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\models\pagination.ts" />
+    <None Remove="ClientApp\src\app\models\product.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\images\.DS_Store" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj" />
     <ProjectReference Include="..\Infrastracture\Infrastracture.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\models\pagination.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\models\product.ts" />
   </ItemGroup>
 
     <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
