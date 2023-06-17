@@ -31,6 +31,7 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\app\app-routing-module.ts" />
+    <None Remove="ClientApp\src\app\shared\models\basket.ts" />
     <None Remove="ClientApp\src\app\shared\models\brand.ts" />
     <None Remove="ClientApp\src\app\shared\models\pagination.ts" />
     <None Remove="ClientApp\src\app\shared\models\product.ts" />
@@ -49,6 +50,7 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\app-routing-module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\models\basket.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\shared\models\brand.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\shared\models\pagination.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\shared\models\product.ts" />
