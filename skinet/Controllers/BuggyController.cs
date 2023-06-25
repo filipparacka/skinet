@@ -1,4 +1,5 @@
 ﻿using Infrastracture.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using skinet.Errors;
 
@@ -11,6 +12,13 @@ namespace skinet.Controllers
         public BuggyController(StoreContext storeContext)
         {
             this.storeContext = storeContext;
+        }
+
+        [HttpGet("testauth")]
+        [Authorize]
+        public ActionResult<string> GetSecretText()
+        {
+            return "secret stuff";
         }
 
         [HttpGet("notfound")]
